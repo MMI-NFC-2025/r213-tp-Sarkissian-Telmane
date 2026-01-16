@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
-
-import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <html lang="en">
@@ -12,8 +11,9 @@ import Header from "../components/Header.astro";
         <title>Offres</title>
     </head>
     <body>
-        <Header />
-        <h1>You offer me : 10000 beers, i offer you : 10000 empty beers</h1>
+        <Layout titre="Offres">
+            <h1>Offres</h1>
+        </Layout>
     </body>
 </html>;
 
