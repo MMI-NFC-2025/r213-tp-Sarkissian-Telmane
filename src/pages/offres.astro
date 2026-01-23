@@ -75,10 +75,10 @@ const offres = [
             const isFavori = offre.dataset.favori === 'true';
             
             if (showOnlyFavorites) {
-                offre.style.display = isFavori ? 'block' : 'none';
+                offre.style.display = isFavori ? 'flex' : 'none';
                 button.textContent = 'Afficher tout';
             } else {
-                offre.style.display = 'block';
+                offre.style.display = 'flex';
                 button.textContent = 'Afficher les favoris';
             }
         });
