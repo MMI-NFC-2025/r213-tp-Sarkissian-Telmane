@@ -30,7 +30,7 @@ export async function getImageUrl(record, recordImage) {
 }
 
 
- // TP 4 //
+// TP 4 //
 
 
 export async function AgentsId(id) {
@@ -83,5 +83,17 @@ export async function maisonFavoriAgent(a) {
         expand: 'agents'
     });
     return records;
+}
+
+export async function maisonsBySurface(surfaceMin) {
+    try {
+        const records = await pb.collection('maison').getFullList({
+            filter: `surface > ${surfaceMin}`
+        });
+        return records;
+    } catch (error) {
+        console.log('Une erreur est survenue en filtrant les maisons par surface', error);
+        return [];
+    }
 }
 
