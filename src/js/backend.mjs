@@ -15,6 +15,16 @@ export async function getOffres() {
     }
 }
 
+export async function getOffre(id) {
+    try {
+        const data = await pb.collection('maison').getOne(id);
+        return data;
+    } catch (error) {
+        console.log('Une erreur est survenue en lisant la maison', error);
+        return null;
+    }
+}
+
 export async function getImageUrl(record, recordImage) {
     return pb.files.getURL(record, recordImage);
 }
