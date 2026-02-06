@@ -1,0 +1,13 @@
+---
+import Cards from "../../../components/Cards.astro";
+import { maisonsByPrice } from "../../../js/backend.mjs";
+import Layout from "../../../layouts/Layout.astro";
+
+const { prix } = Astro.params;
+
+const offres = await maisonsByPrice(prix);
+---
+
+<Layout>
+    {offres.map((offre) => <Cards offres={offre} />)}
+</Layout>

@@ -97,3 +97,15 @@ export async function maisonsBySurface(surfaceMin) {
     }
 }
 
+export async function maisonsByPrice(prix) {
+    try {
+        const records = await pb.collection('maison').getFullList({
+            filter: `prix < ${prix}`
+        });
+        return records;
+    } catch (error) {
+        console.log('Une erreur est survenue en filtrant les maisons par surface', error);
+        return [];
+    }
+}
+
