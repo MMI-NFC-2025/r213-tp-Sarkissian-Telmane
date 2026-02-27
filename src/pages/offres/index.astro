@@ -69,8 +69,10 @@ button?.addEventListener('click', () => {
 });
     </script>
 
-    <form action="/offres" method="POST">
-    <input type="number" name="minPrix" placeholder="Prix minimum" />
-    <input type="number" name="maxPrix" placeholder="Prix maximum" />
-    <input type="submit" value="Filtrer par prix" />
+    <form class="bg-blue-300 my-9 h-16" action="/offres" method="POST">
+    <div class="ml-5">
+        <input class="border-2 border-amber-400 shadow shadow-amber-700 font-bold text-cyan-900" type="number" name="minPrix" placeholder="Prix minimum" />
+        <input class="border-2 border-amber-400 shadow shadow-amber-700 font-bold text-cyan-900" type="number" name="maxPrix" placeholder="Prix maximum" />
+        <input class="border-2 border-amber-400 shadow shadow-amber-700 font-bold text-cyan-900" type="submit" value="Filtrer par prix" />
+    </div>
     </form>
