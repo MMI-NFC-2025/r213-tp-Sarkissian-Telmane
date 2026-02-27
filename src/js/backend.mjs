@@ -109,6 +109,13 @@ export async function maisonsByPrice(prix) {
     }
 }
 
+export async function byPriceBtwn(min, max) {
+    const records = await pb.collection('maison').getFullList({
+        filter: `prix < ${max} && prix > ${min} `
+    });
+    return records;
+}
+
 export async function addOffre(house) {
     try {
         await pb.collection('maison').create(house);
