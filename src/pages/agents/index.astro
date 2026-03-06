@@ -12,9 +12,10 @@ const agents = await getAllAgents();
             agents.map((agent) => (
                 <li class="offre bg-amber-700 w-125 m-4 rounded-2xl flex items-center flex-col">
                     <h3 class="text-lg font-semibold">
-                        {agent.nom} {agent.prenom}
+                        {agent.prenom} {agent.nom}
                     </h3>
-                    <p>Email : {agent.email}</p>
+                    <p>Email : {agent.email}</p>
+                    <a href={`/agents/${agent.id}`}>Voir plus</a>
                 </li>
             ))
         }
