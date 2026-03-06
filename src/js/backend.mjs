@@ -131,3 +131,8 @@ export async function addOffre(house) {
         };
     }
 }
+
+export async function getAllAgents() {
+        const records = await pb.collection('agents').getFullList();
+        return records;
+}
